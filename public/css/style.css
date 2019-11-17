@@ -38,7 +38,7 @@ h1{
 .jumbotron{  
   text-align: center;
   margin-top: 30px;
-  width: 80%;
+  width: 100%;
   float: left;
   background-image: url("../images/piratemap_02.png");
 
@@ -78,10 +78,10 @@ h1{
 
 
 #health{
-  float:right ; 
+  /* float: ;  */
   clear: both;
   position:relative;
-  height:600px;
+  /* height:; */
   overflow:scroll;
   /* width: -100px */
   /* position: relative;
@@ -126,11 +126,14 @@ bottom:0px;
   /* Visual */
   background: clear;
 }
+
 .container {
+  
   width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  clear: both;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 #main-container {
   padding-bottom: 5px;
@@ -210,14 +213,59 @@ input[type=submit] {
 }
 
 
+
+@media (max-width: 576px) {  };
+.card{
+  width:100%;
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) { };
 /* 
-@media (min-width: 576px) { ... }
+// Large devices (desktops, 992px and up) */
+@media (max-width: 992px) { }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) { }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... } */
+@media (min-width: 768px){
+  .col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12{
+      float:left;
+  }
+  .col-md-12{
+      width:100%;
+  }
+  .col-md-11{
+      width:91.66667%;
+  }
+  .col-md-10{
+      width:83.33333%;
+  }
+  .col-md-9{
+      width:75%;
+  }
+  .col-md-8{
+      width:66.66667%;
+  }
+  .col-md-7{
+      width:58.33333%;
+  }
+  .col-md-6{
+      width:50%;
+  }
+  .col-md-5{
+      width:41.66667%;
+  }
+  .col-md-4{
+      width:33.33333%;
+  }
+  .col-md-3{
+      width:25%;
+  }
+  .col-md-2{
+      width:16.66667%;
+  }
+  .col-md-1{
+      width:8.33333%;
+  }
+};
