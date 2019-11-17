@@ -22,15 +22,23 @@ module.exports = function(app) {
       });
     });
   });
+  app.get("/health", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("health", {
+        msg: "Welcome!",
+        examples: dbExamples
+      });
+    });
+  });
 
   app.get("/Loggedin", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/loggedIn.html"));
   });
 
   // blog route loads blog.html
-  app.get("/health", function(req, res) {
-    res.sendFile(path.join(__dirname, "../health.html"));
-  });
+  // app.get("/health", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../health"));
+  // });
 
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/home.html"));
