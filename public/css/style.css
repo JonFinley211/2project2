@@ -242,6 +242,9 @@ input[type=submit] {
   .card-body{
     width:100%;
   }
+  #health2{
+    width: 19rem;
+  }
 };
 /* 
 // Large devices (desktops, 992px and up) */
