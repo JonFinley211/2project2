@@ -28,7 +28,9 @@ module.exports = function(app) {
   });
 
   // blog route loads blog.html
-  
+  app.get("/health", function(req, res) {
+    res.sendFile(path.join(__dirname, "../health.html"));
+  });
 
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/home.html"));
@@ -38,9 +40,6 @@ module.exports = function(app) {
   });
   app.get("/home", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/home.html"));
-  });
-  app.get("/health", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/health.html"));
   });
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
