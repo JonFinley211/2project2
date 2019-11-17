@@ -52,13 +52,15 @@ h1{
 .card{
   text-align: center; 
   /* width: 5%; */
-  width: 40%;
+  width: 50%;
   margin-top: 30px;
   margin-right: 20px;
   /* padding-left: 50%; */
   float: left;
+  line-height: normal;
 
 }
+
 
 .navbar-brand{
   margin-left: 11%
@@ -82,7 +84,7 @@ h1{
   clear: both;
   position:relative;
   /* height:; */
-  overflow:scroll;
+  /* overflow:scroll; */
   /* width: -100px */
   /* position: relative;
   box-align:center */
@@ -214,10 +216,22 @@ input[type=submit] {
 
 
 
-@media (max-width: 576px) {  };
+@media (max-width: 576px) {  ;
 .card-body{
   width:100%;
 }
+.card{
+  text-align: center; 
+  /* width: 5%; */
+  width: 100%;
+  margin-top: 30px;
+  margin-right: 20px;
+  /* padding-left: 50%; */
+  float: left;
+  line-height: normal;
+
+}
+};
 
 /* // Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) { 
