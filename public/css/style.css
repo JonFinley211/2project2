@@ -222,7 +222,7 @@ input[type=submit] {
   width:100%;
 }
 #health2{
-  width:auto;
+  width:100%;
 }
 .card{
   text-align: center; 
@@ -242,7 +242,7 @@ input[type=submit] {
   .card-body{
     width:100%;
   }
-  #health2{
+  .health2{
     width: 21rem;
   }
 };
