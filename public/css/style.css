@@ -220,6 +220,7 @@ input[type=submit] {
 @media (max-width: 576px) {  ;
 .card-body{
   width:100%;
+  float: left;
 }
 #health2{
   width:100%;
@@ -240,7 +241,7 @@ input[type=submit] {
 /* // Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) { 
   .card-body{
-    width:100%;
+    width:18rem;
   }
   .health2{
     width: 21rem;
