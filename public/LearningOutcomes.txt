@@ -1,0 +1,141 @@
+Learning Outcomes for Project2 - AJ Babler - July 2019/Jan 2020
+=============================================================================
+Group :: AJ Babler, Jon Finley, Greg Henderson, Eric Varner.
+=============================================================================
+
+SATURDAY ***
+
+Initially during the saturday class the idea occurred to me for the app since I wanted
+to stay as far away from other API's as possible (due to my previous headaches with 
+Zomato in project 1). Therefore the idea was to make an app for a tabletop game that 
+required dice (for my Unity requirement as our new tech) and generated a LOT of data.
+Thus, Dungeons and Dragons made sense.
+
+I sketched the original concept including much of the UI out on that Saturday in class while
+Jon worked on getting Github set up.
+
+***
+
+
+TUESDAY ***
+
+Tuesday, we drew on the whiteboard since the group was not quite on the same page with
+all of the various tools we wanted to implement. Scope was a big concern, and I made sure
+to emphasize MVP and keeping it as simple as possible. I helped Eric with the testUser
+connection stuff in MySQL Workbench, and troubleshoot getting the database created.
+By Tuesday, I had the initial models (both high poly and low_poly) made in blender.
+
+This was the point where Blender started to really ramp up in difficulty. I needed about
+30 keyboard commands to manipulate the program properly, including (but not limited to)
+the numpad keys for camera views with 'ctrl' for the opposite view, numpad 5 for toggling
+ISO and Ortho view modes, as well as various keys on the left for basic commands, 'A' for 
+Select All (which is a TOGGLE btw which took me hours to understand), X for delete, etc.
+
+Furthermore, in Blender there are various modes for different tasks, where Object mode
+represents geometry as far as I can tell, and edit mode represents vertices, vertexes,
+and faces. Selection is different in each, and unselecting the four-sided and six-sided
+die to apply a different bevel to them was a massive hurdle in understanding the UX in each
+respective mode.
+[** See Images 1, 2, 3, 4, 5, and 6**].
+
+***
+
+
+THURSDAY ***
+
+By Thursday, everyone was freaking out. Github was a problem naturally, Greg had gotten
+some of the UI done, and the database wasn't talking to anything. At this point, I worked
+with Greg since I was also part of the 'front end' half of the team. I drew out explicitly
+what the UI should be together with him since he requested the goals for the UI. We worked out
+things like button placement, walked through the user journey, etc.
+
+By this point, I was stuck in blender, and my models weren't exporting correctly. 
+[** See Images 7, 8, 9, and 10 **].
+
+***
+
+
+SATURDAY #2 ***
+
+By this day, we were behind in terms of the UI not being finished, the database still not 
+connecting, and Github causing all sorts of fun with merges and pulls. Greg's UI didn't
+use handlebars (it was bootstrap for simplicity) but the example Jon had pulled (stu.zip in slack)
+was using handlebars so issues there.
+
+At this point, I had the dice exported into Substance Painter, has a great chat with Kazadi about
+the pipeline and some contacts he might know, as well as slacked him the materials I was
+referencing to help make the dice_roller. 
+
+Substance Painter was a completely new program for me, and this was the first time I used it.
+To see something like a simple geometry mesh exported from blender take on the color,
+lighting effects, and texture of real plastic in a program like this was extremely motivating!
+I felt like I could hold them almost. The stencil layer and object layer were easy to pick up
+and the controls were intuitive. This was a 'motivational playlist' part of the process, where some
+good jams in your headphones and a cup of coffee aided to this zen of bringing you creation
+to life after Blender wrecked your mojo. I hated Blender at this point. I had this done Friday night,
+and by this morning, my single D20 was rolling in Unity with a basic script.
+[** See the Substance Painter images **]
+
+***
+
+
+MONDAY ***
+
+We met at Jon's house on Monday. I had used photoshop after substance painter on to try again
+to color and texture my own dice, but either the alpha, the texture, or the Blender export was messing
+something up. I used the dice package that the maker of the tutorial generously hosted for free
+and focused on the scripting portion, since I had followed the popeline all the way through,
+but the dice wouldn't texture correctly in Unity. By the end of this day, Jon was working on Handlebars still, 
+Greg on UI, Eric's computer was throwing tons of errors and therefore he couldn't run anyhting or make any additions,
+and I was finishing up the scripts with C# syntax errors everywhere. I got multiple die to roll by the end of the night.
+
+***
+
+
+TUESDAY ***
+
+By Tuesday night, we were all not happy. Jen helped me to set up a new project2_rework repo (which has since been
+deleted) and in the last 15 minutes of class, I asserted that Handlebars needed to be removed from the project since
+it was screwing with the only UI we had, our routes, AND my dice imbedding process. At this point, I had managed to
+get the buttons and single dice selection to work, exported the build, and the upon a final test in chrom where my
+computer froze and crashed (no mouse movement or ctrl+alt+del recognition), the Unity project was set back to the state
+ it was in on the Saturday. The export survived though, and was what we ultimately presented. LEARNING OUTCOME:: MAKE 
+BACKUPS OF YOUR BACKUPS AND DON'T TRUST THE CLOUD!!
+
+***
+
+
+WEDNESDAY ***
+
+By this day tension was high, our html-routes worked, but the Sequelize ORM was something nobody could wrap their head
+around. Jon, Greg, and I met again at Greg's house and we worked together to get it working several different ways (tutorials,
+activities, googling), and worked seperately to the same end with no results. We even called several more senior developers
+but as they had no experience in Javascript, they could understand the concept but not explicitly tell us where we were
+wrong. At this point we were trying to add some kind of JQuery middleware and the api-routes and Sequelize models properly,
+but again no results. We even created seperate databases in case that was the issue .I worked into the morning, and began to 
+understand that the html page is the view, the JS under public is
+the JQuery controller, and the model is actually the table in the databse that we set up so Sequelize can reference it and
+make objects that hold the necessary data. 
+
+***
+
+
+THURSDAY ***
+
+Jon worked early in the morning to get a presentable product together, we communicated about what we learned, and all agreed
+to arrive as early as we could on cmapus to finish up. I added the html route for the dice roller in the site and put the slides
+together.
+
+***
+
+
+IN CONCLUSION:: our error was our approach. We came at a full stack project like this with the same mentality as Project 1, a
+primarily front-end project where we only needed to understand how the data came back and move those variables where they needed
+to go. Not only were we weak in this are for project 2, we forgot that WE had to determine the way data came back this time aorund. 
+Furthermore, we each got buried in our own slices of the project. I focused initially entirely on the new technology stack, Greg 
+focused on UI bootstrap, Eric focused on logic for username/password validation, and Jon focused on handlebars and Github.
+
+The biggest outcome from this project was essentially realizing that the most boring simple part in the begginning is the most
+important; Get it to work from front to back, and then build your app on top of that success.
+
+

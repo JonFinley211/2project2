@@ -35,10 +35,9 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/loggedIn.html"));
   });
 
-  // blog route loads blog.html
-  // app.get("/health", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../health"));
-  // });
+  app.get("/dice", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/dice.html"));
+  });
 
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/home.html"));
