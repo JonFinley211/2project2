@@ -113,3 +113,6 @@ function guestredirect() {
 function camp(){
   location.href = "/campaign";
 }
+function roll(e){
+  return !(e.keyCode == 32);
+}
